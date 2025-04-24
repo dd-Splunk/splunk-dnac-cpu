@@ -4,5 +4,5 @@
   <view name="datasets" />
   <view name="reports" />
   <view name="alerts" />
-  <view name="cpu_and_memory_classic_clone" default='true' />
+  <view name="cpu_and_memory_classic" default='true' />
 </nav>
