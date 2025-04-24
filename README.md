@@ -1,4 +1,4 @@
-# Splunk Feinstaub
+# Splunk DNAC CPU dashboards
 
 Using GH Actions to release `.spl`
 
