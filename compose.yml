@@ -10,21 +10,17 @@ services:
     environment:
       - SPLUNK_START_ARGS=--accept-license
       - SPLUNK_STANDALONE_URL=so1
-      - DEBUG=true
+      - DEBUG=false
       - SPLUNK_PASSWORD=${SPLUNK_PASSWORD}
-      - SPLUNK_HEC_TOKEN=${SPLUNK_HEC_TOKEN}
       - SPLUNK_APPS_URL=https://github.com/dd-Splunk/splunk-dnac-cpu/releases/download/latest/splunk-dnac-cpu.spl
 
     restart: unless-stopped
     ports:
       - 8000:8000
-      - 8088:8088
-      - 8089:8089
-      - 9997:9997
+
     volumes:
       - so1-var:/opt/splunk/var
       - so1-etc:/opt/splunk/etc
-      # - ./app:/opt/splunk/etc/apps/feinstaub
 
 networks:
   splunknet:
